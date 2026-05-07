@@ -16,7 +16,7 @@ namespace VooApi.Hubs
 
         public async Task JoinUsuario(string userId)
         {
-            await Groups.AddToGroupAsync(Context.ConnectionId, userId);
+            await Groups.AddToGroupAsync(Context.ConnectionId, $"usuario-{userId}");
         }
 
         public async Task NotificarSalaCerrada(string salaId)
