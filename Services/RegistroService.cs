@@ -204,21 +204,21 @@ namespace VooApi.Services
                 };
             }
 
-            var distanciaKm = CalcularDistanciaKm(
-                dto.Latitud,
-                dto.Longitud,
-                sala.Latitud,
-                sala.Longitud
-            );
+            // var distanciaKm = CalcularDistanciaKm(
+            //     dto.Latitud,
+            //     dto.Longitud,
+            //     sala.Latitud,
+            //     sala.Longitud
+            // );
 
-            if (distanciaKm > 1.0)
-            {
-                return new RegistroResultado
-                {
-                    Exito = false,
-                    Mensaje = $"Estás demasiado lejos de la sala ({distanciaKm:F2} km). Debes estar a menos de 1km"
-                };
-            }
+            // if (distanciaKm > 1.0)
+            // {
+            //     return new RegistroResultado
+            //     {
+            //         Exito = false,
+            //         Mensaje = $"Estás demasiado lejos de la sala ({distanciaKm:F2} km). Debes estar a menos de 1km"
+            //     };
+            // }
 
             var usuario = new Usuario
             {
